@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type = text placeholder="enter a number" id="number"/>
+<script>
+    const para=document.createElement('p')
+    function eventKeyUp(){
+        para.innerText = "typing"
+        document.body.appendChild(para)
+    }
+    function eventClick(){
+        para.innerText ="click"
+        document.body.appendChild(para)
+    }
+    function eventKeyDown(){
+        para.innerText ="Erasing"
+        document.body.appendChild(para)
+    }
+    function eventDown(){
+        para.innerText = "Deleting"
+        document.body.appendChild(para)
+    }
+    const element=document.getElementById("number")
+    element.addEventListener("keyup",eventKeyUp)
+    element.addEventListener("click",eventClick)
+    element.addEventListener("keydown",eventKeyDown)
+    element.addEventLister("mousemove",eventDown)
+    
+    
+</script>
+
+</body>
+</html>
